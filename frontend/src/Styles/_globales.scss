@@ -1,0 +1,19 @@
+@use '../../src/styles/values';
+@use '../../src/styles/colors';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: values.$fontText;
+  background-color: colors.$blue;
+  color: colors.$white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
