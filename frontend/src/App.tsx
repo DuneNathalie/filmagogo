@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Login from './Pages/Login/Login.tsx';
-import Home from './Pages/Home.tsx';
-import Descriptif from './Pages/Descriptif.tsx';
-import Favoris from './Pages/Favoris.tsx';
+import Home from './Pages/Home/Home.tsx';
+import Descriptif from './Pages/Descriptif/Descriptif.tsx';
+import Favoris from './Pages/Favoris/Favoris.tsx';
 
 const App: React.FC = () => {
   return (
