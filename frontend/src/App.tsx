@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Login from './Pages/Login.tsx';
+import Login from './Pages/Login/Login.tsx';
 import Home from './Pages/Home.tsx';
 import Descriptif from './Pages/Descriptif.tsx';
 import Favoris from './Pages/Favoris.tsx';
