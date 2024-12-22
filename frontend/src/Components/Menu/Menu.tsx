@@ -5,9 +5,12 @@ import Styles from "./Menu.module.scss";
 interface MenuProps {
     img: string;
     title:string;
+    style?:string
 }
 
 const Menu: React.FC<MenuProps> = ({img, title}) => {
+    const name = localStorage.getItem('User');
+    title = name;
     return (
         <div className={Styles.container}>
             <div className={Styles.user}>

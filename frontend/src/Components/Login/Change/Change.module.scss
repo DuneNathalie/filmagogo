@@ -1,0 +1,15 @@
+@use"../../../Styles/colors";
+
+.container{
+    display:flex;
+    align-items: center;
+
+    button{
+        background-color: colors.$blue;
+        border: none;
+        color:colors.$white;
+        cursor: pointer;
+        text-align: center;
+        font-size: 2rem;
+    }
+}

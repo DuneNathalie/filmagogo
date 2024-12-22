@@ -4,15 +4,16 @@ import Styles from './Profil.module.scss';
 
 import User from './../User/User.tsx';
 import UserOne from "./../../../assets/user1.png";
-import UserTwo from "./../../../assets/user2.png"
 
 const Profil: React.FC = () => {
+    const name = localStorage.getItem('User');
+
+    console.log("verifie si j'ai bien les deux", name);
     return (
         <div className={Styles.container}>
             <h1>Qui est-ce?</h1>
             <div className={Styles.user}>
-                <User user={UserOne} name="User One" />
-                <User user={UserTwo} name="User Two" />
+                <User user={UserOne} name={name} />
             </div>
         </div>
     );
