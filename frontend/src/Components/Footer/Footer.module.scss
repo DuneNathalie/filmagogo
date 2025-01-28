@@ -1,10 +1,26 @@
-.container{
-    max-height: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+@use "../../styles/colors";
 
-    img{
-        height: 30px;
+.container {
+    width: 100%;
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin: 5px;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                color: colors.$orangeLight;
+                &:hover {
+                    color: colors.$orange;
+                }
+            }
+        }
     }
 }

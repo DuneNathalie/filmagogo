@@ -7,7 +7,7 @@ import Menu from '../../Components/Menu/Menu.tsx';
 import Styles from "./Home.module.scss";
 
 import Pocket from "../../assets/pocket.png";
-import User from "../../assets/user1.png";
+import User from "../../assets/user.png";
 
 const Home:React.FC = () => {
  // const [films, setFilms] = useState([]);

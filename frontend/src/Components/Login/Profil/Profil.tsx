@@ -3,7 +3,7 @@ import React from 'react';
 import Styles from './Profil.module.scss';
 
 import User from './../User/User.tsx';
-import UserOne from "./../../../assets/user1.png";
+import UserOne from "./../../../assets/user.png";
 
 const Profil: React.FC = () => {
     const name = localStorage.getItem('User');

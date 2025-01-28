@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useModal } from '../../../src/context/modal.tsx';
 
-import User1 from "../../assets/user1.png";
+import { useNavigate } from 'react-router-dom';
+import User from "../../assets/user.png";
 
 import Styles from './Modal.module.scss';
 
 const Modal: React.FC = () => {
+  const navigate = useNavigate();
   const { hideModal } = useModal();
 
   const initialName = localStorage.getItem('User');
@@ -14,21 +16,37 @@ const Modal: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
+  
+    if (!name) {
+      console.log("Pas de stockage");
+      hideModal();
+      return;
+    }
+  
+    if (name === "Utilisateur") {
+      localStorage.setItem('User', name);
+      console.log("Nom stocké");
+      hideModal();
+      return;
+    }
+  
     if (name !== initialName) {
       localStorage.setItem('User', name);
-      const result = localStorage.getItem('User');
-      console.log(result);
+      console.log("Résultat stocké =>", name);
     }
-    alert('Les noms ont été mis à jour !');
-    hideModal(); // Fermer la modal
+  
+    navigate('/home');
+    console.log("Navigation vers home", name);
+    hideModal();
   };
 
   return (
     <div className={Styles.container}>
       <form onSubmit={handleSubmit}>
         <div className={Styles.user}>
-          <img src={User1} alt="user" />
+          <div className={Styles.img}>
+            <img src={User} alt="user" />
+          </div>
           <label>
             {initialName}:
             <input
