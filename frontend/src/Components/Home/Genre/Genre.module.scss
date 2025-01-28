@@ -1,5 +1,48 @@
 .container{
     display: flex;
-    padding: 1.5vw;
     flex-direction: column;
+    padding: 10px 20px;
+
+    .swiper{
+        display: flex;
+        overflow: hidden;
+   
+        .mySwiper{
+            color:aliceblue;
+        }
+
+        .slide{
+            
+            img{
+                width: 220px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    
+        .swiper{
+            display: flex;
+            overflow: hidden;
+       
+            .mySwiper{
+                color:aliceblue;
+            }
+    
+            .slide{
+                img{
+                    width: 220px;
+                }
+            }
+    
+        }
+    }
+   
 }

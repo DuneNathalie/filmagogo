@@ -4,23 +4,25 @@
 .container{
     display:flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 15px;
     max-height: 50px;
-    border-bottom: 1.5px solid colors.$white;
+    border-bottom: 1.5px solid colors.$orange;
 
     .user{
-    display: flex;
-    align-items: center; 
-    gap:0.5vw;
-    flex: 1;
-
+        display: flex;
+        align-items: center; 
+        gap:0.5vw;
+        flex: 1;
+        
         img{
+            background-color: colors.$orange;
+            border-radius: 50%;
             width: 30px;
             height: 30px;
         }
 
         p{
-            color:colors.$orange;
+            color:colors.$white;
             font-family: values.$fontTitle;
             font-weight: bold;
             font-size: 1.5rem;
@@ -29,11 +31,16 @@
 
     .Links{
         display: flex;
+        align-items: center;
         gap: 2vw;
         
         a{
             text-decoration: none;
             color: colors.$white;
+
+            &:hover{
+                color: colors.$orange;
+            }
         }
     }
 }

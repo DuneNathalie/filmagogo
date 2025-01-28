@@ -10,7 +10,7 @@ interface UserProps {
 }
 
 const User: React.FC<UserProps> = ({ user, name }) => {
-    const nameUser = localStorage.getItem('User');
+ //   const nameUser = localStorage.getItem('User');
     const navigate = useNavigate();
     const handleClick = () => {
         if (name === "Utilisateur") {
