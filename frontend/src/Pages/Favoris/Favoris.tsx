@@ -4,7 +4,7 @@ import Menu from '../../Components/Menu/Menu.tsx';
 
 import Styles from "./Favoris.module.scss";
 
-import User from "../../assets/user1.png";
+import User from "../../assets/user.png";
 
 const Favoris:React.FC = () => {
   return (

@@ -20,6 +20,7 @@ const App: React.FC = () => {
           {/** <Route path='/Contact' element={<Contact />} />*/}
         </Routes>
       </ModalProvider>
+    
     </div>
   );
 }

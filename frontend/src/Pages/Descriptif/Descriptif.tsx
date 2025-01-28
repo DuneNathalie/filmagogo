@@ -2,7 +2,7 @@ import React from 'react';
 
 import Menu from "../../Components/Menu/Menu.tsx";
 
-import User from "../../assets/user1.png";
+import User from "../../assets/user.png";
 
 import Styles from "./Descriptif.module.scss";
 
