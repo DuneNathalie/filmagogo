@@ -1,15 +1,21 @@
 import React from 'react';
 
+import Styles from './Button.module.scss';
+
 interface ButtonProps {
     title: string;
     onClick: () => void;
-    style?: string;
+    type: 'favoris' | 'site';
 }
 
-const Button: React.FC<ButtonProps> = ({ title, onClick, style }) => {
+const Button: React.FC<ButtonProps> = ({ title, onClick,type}) => {
     return (
-        <button onClick={onClick} style={{ backgroundColor: style }}>
+        <div className={Styles.container}>
+        <button onClick={onClick} className={type === 'favoris' ? Styles.favoris : Styles.site}>
             {title}
         </button>
+        </div>
     );
 };
+
+export default Button;

@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, A11y } from 'swiper/modules';
 
+import { useNavigate } from 'react-router-dom';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -22,6 +24,15 @@ interface GenreProps {
 }
 
 const Genre: React.FC<GenreProps> = ({ theme, data }) => {
+    const navigate = useNavigate();
+
+    const handleClickedFilm = (event: React.MouseEvent<HTMLImageElement>) => {
+        const id = Number(event.currentTarget.getAttribute('data-id'));
+        localStorage.setItem('idFilm', id.toString());
+        const idFilm = localStorage.getItem('idFilm');
+        alert(`idFilm => ${idFilm} Film clicked: ${id}`);
+        navigate('/descriptif');
+    };
 
     return (
         <div className={Styles.container}>
@@ -40,7 +51,8 @@ const Genre: React.FC<GenreProps> = ({ theme, data }) => {
                         <SwiperSlide key={film.id} className={Styles.slide}>
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                                alt={film.title || "Film"}
+                                data-id={film.id}
+                                onClick={handleClickedFilm}
                             />
                         </SwiperSlide>
                     ))}
