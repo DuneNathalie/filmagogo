@@ -1,5 +1,21 @@
 .container{
     display: flex;
-    padding: 1.5vw;
     flex-direction: column;
+    padding: 20px;
+
+    .swiper{
+        display: flex;
+        overflow: hidden;
+   
+        .mySwiper{
+            color:aliceblue;
+        }
+
+        .slide{
+            img{
+                width: 220px;
+            }
+        }
+
+    }
 }
