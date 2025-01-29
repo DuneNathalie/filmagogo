@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Styles from "./Genre.module.scss";
 
@@ -26,11 +26,29 @@ interface GenreProps {
 const Genre: React.FC<GenreProps> = ({ theme, data }) => {
     const navigate = useNavigate();
 
+    const [slidesPerView, setSlidesPerView] = useState(window.innerWidth <= 700 ? 1 : 8);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSlidesPerView(window.innerWidth <= 700 ? 1 : 8);
+        };
+    
+        window.addEventListener('resize', handleResize);
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
+
     const handleClickedFilm = (event: React.MouseEvent<HTMLImageElement>) => {
         const id = Number(event.currentTarget.getAttribute('data-id'));
         localStorage.setItem('idFilm', id.toString());
-        const idFilm = localStorage.getItem('idFilm');
-        alert(`idFilm => ${idFilm} Film clicked: ${id}`);
+
+        // Déclenche un événement personnalisé
+        window.dispatchEvent(new Event('storage'));
+
         navigate('/descriptif');
     };
 
@@ -41,10 +59,11 @@ const Genre: React.FC<GenreProps> = ({ theme, data }) => {
                 <Swiper
                     modules={[Navigation, A11y]}
                     spaceBetween={10}
-                    slidesPerView={8}
+                    slidesPerView={slidesPerView}
                     navigation
                     style={{
-                        '--swiper-navigation-color': '#fff'
+                        '--swiper-navigation-color': '#fff',
+
                     } as React.CSSProperties}
                 >
                     {data.map((film) => (

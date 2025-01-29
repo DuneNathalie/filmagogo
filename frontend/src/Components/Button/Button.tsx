@@ -3,16 +3,16 @@ import React from 'react';
 import Styles from './Button.module.scss';
 
 interface ButtonProps {
-    title: string;
+    text: string;
     onClick: () => void;
     type: 'favoris' | 'site';
 }
 
-const Button: React.FC<ButtonProps> = ({ title, onClick,type}) => {
+const Button: React.FC<ButtonProps> = ({ text, onClick,type}) => {
     return (
         <div className={Styles.container}>
         <button onClick={onClick} className={type === 'favoris' ? Styles.favoris : Styles.site}>
-            {title}
+            {text}
         </button>
         </div>
     );

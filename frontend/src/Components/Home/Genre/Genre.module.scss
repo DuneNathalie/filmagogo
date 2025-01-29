@@ -1,20 +1,25 @@
-.container{
+@use"../../../Styles/values";
+
+.container {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
 
-    .swiper{
+    h2 {
+        font-family: values.$fontTitle;
+        font-size: 24px;
+    }
+
+    .swiper {
         display: flex;
         overflow: hidden;
-   
-        .mySwiper{
-            color:aliceblue;
+        .mySwiper {
+            color: aliceblue;
         }
 
-        .slide{
-            
-            img{
-                width: 220px;
+        .slide {
+            img {
+                max-width: 220px;
                 cursor: pointer;
             }
         }
@@ -23,26 +28,33 @@
 }
 
 @media screen and (max-width: 700px) {
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
-        padding: 20px;
-    
-        .swiper{
+        padding: 5px 5px 10px 5px;
+
+        h2{
+            margin: 10px;
+        }
+
+        .swiper {
             display: flex;
             overflow: hidden;
-       
-            .mySwiper{
-                color:aliceblue;
+
+            .mySwiper {
+                color: aliceblue;
             }
-    
-            .slide{
-                img{
+
+            .slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
                     width: 220px;
                 }
             }
-    
+
         }
     }
-   
+
 }

@@ -8,6 +8,7 @@ import Change from '../../Components/Login/Change/Change.tsx';
 import Footer from '../../Components/Footer/Footer.tsx';
 
 const Login: React.FC = () => {
+ // localStorage.removeItem('favoris');
   return (
       <div className={Styles.container}>
         <Header/>
