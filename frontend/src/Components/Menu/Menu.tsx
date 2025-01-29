@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Styles from "./Menu.module.scss";
+import NavBar from '../NavBar/NavBar.tsx';
 
 interface MenuProps {
     img: string;
@@ -9,6 +10,7 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ img, title }) => {
+ 
     const name = localStorage.getItem('User');
     title = name;
     return (
@@ -18,9 +20,7 @@ const Menu: React.FC<MenuProps> = ({ img, title }) => {
                 <p>{title}</p>
             </div>
             <div className={Styles.Links}>
-                <a href="/home">Films</a>
-                <a href="/favoris">Favoris</a>
-                <a href="/">Quitter</a>
+                <NavBar/>
             </div>
         </div>
     );
