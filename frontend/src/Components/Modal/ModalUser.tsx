@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useModal } from '../../../src/context/modal.tsx';
+import { useModal } from '../../context/modal.tsx';
 
 import { useNavigate } from 'react-router-dom';
 import User from "../../assets/user.png";
 
 import Styles from './Modal.module.scss';
 
-const Modal: React.FC = () => {
+const ModalUser: React.FC = () => {
   const navigate = useNavigate();
   const { hideModal } = useModal();
 
@@ -33,6 +33,7 @@ const Modal: React.FC = () => {
     if (name !== initialName) {
       localStorage.setItem('User', name);
       console.log("Résultat stocké =>", name);
+      localStorage.removeItem('favoris');
     }
   
     navigate('/home');
@@ -48,7 +49,7 @@ const Modal: React.FC = () => {
             <img src={User} alt="user" />
           </div>
           <label>
-            {initialName}:
+           {/*{initialName} :*/} Nom d'utilisateur:
             <input
               type="text"
               value={name}
@@ -62,4 +63,4 @@ const Modal: React.FC = () => {
   );
 };
 
-export default Modal;
+export default ModalUser;

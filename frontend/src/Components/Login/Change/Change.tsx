@@ -2,7 +2,7 @@ import React from 'react';
 import { useModal } from '../../../context/modal.tsx';
 
 import Styles from './Change.module.scss';
-import ModalContent from '../../Modal/Modal.tsx';
+import ModalContent from '../../Modal/ModalUser.tsx';
 
 const Change: React.FC = () => {
   const { showModal } = useModal();

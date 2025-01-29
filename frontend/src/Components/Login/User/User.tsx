@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Styles from "./User.module.scss";
+import { useModal } from '../../../context/modal.tsx';
+import ModalMessage from '../../Modal/ModalMessage.tsx';
 
 interface UserProps {
     user: string;
@@ -10,11 +12,14 @@ interface UserProps {
 }
 
 const User: React.FC<UserProps> = ({ user, name }) => {
- //   const nameUser = localStorage.getItem('User');
+
+    const { showModal } = useModal();
+
     const navigate = useNavigate();
     const handleClick = () => {
         if (name === "Utilisateur") {
-            alert("Ajouter utilisateur");
+            showModal(<ModalMessage text="Merci d'ajouter un utilisateur pour vous connecter"/>);
+           // alert("Ajouter utilisateur");
         } else{
             navigate('/home');
             localStorage.setItem('User', name);
