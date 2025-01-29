@@ -19,7 +19,6 @@ const Menu: React.FC<MenuProps> = ({ img, title }) => {
             </div>
             <div className={Styles.Links}>
                 <a href="/home">Films</a>
-                {/** <a href="/descriptif">Films</a>*/}
                 <a href="/favoris">Favoris</a>
                 <a href="/">Quitter</a>
             </div>
