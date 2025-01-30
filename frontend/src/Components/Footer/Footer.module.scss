@@ -1,4 +1,5 @@
 @use "../../styles/colors";
+@use "../../styles/values";
 
 .container {
     width: 100%;
@@ -7,21 +8,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
+        gap:10px;
 
         a {
             margin: 5px;
             display: flex;
             align-items: center;
+            text-decoration: none;
+            color: colors.$orange;
+            font-size: 1.3rem;
+            font-family: values.$fontTitle;
 
             .icon {
                 width: 20px;
                 height: 20px;
-                color: colors.$orangeLight;
 
-                &:hover {
-                    color: colors.$orange;
-                }
+            }
+            &:hover {
+                color: colors.$orangeLight;
             }
         }
     }

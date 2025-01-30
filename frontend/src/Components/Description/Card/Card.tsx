@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './Card.module.scss';
 import Button from '../../Button/Button.tsx';
-import ModalUser from '../../Modal/ModalMessage.tsx';
+import ModalContent from '../../Modal/Modal.tsx';
 
 import { useModal } from '../../../context/modal.tsx';
 
@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
     localStorage.setItem('favoris', JSON.stringify(newFilmsFavoris));
 
     console.log('Favoris:', localStorage.getItem('favoris'));
-    showModal(<ModalUser text='Ton film a bien été ajouté à tes favoris'/>);
+    showModal(<ModalContent text='Ton film a bien été ajouté à tes favoris' type='infos'/>);
    /// alert('Le film a été ajouté à vos favoris');
   };
 

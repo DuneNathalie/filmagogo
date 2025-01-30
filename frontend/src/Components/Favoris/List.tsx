@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import {useTypewriter, Cursor} from 'react-simple-typewriter';
+import {useTypewriter} from 'react-simple-typewriter';
 
 import Styles from './List.module.scss';
 

@@ -1,7 +1,9 @@
 @use "../../Styles/colors";
 @use "../../Styles/values";
 
-.container {
+.container{
+
+  .containerForm {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -14,63 +16,68 @@
     z-index: 100;
     background-color: colors.$blue;
     border-radius: 10px;
-
+    box-shadow: 0 0 10px 0 rgba(240, 145, 20);
+    border: solid 1px colors.$orange;
+    
     form {
+      display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .img {
+        margin-bottom: 20px;
+        background-color: colors.$orange;
+        border-radius: 50%;
+        
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      
+      label {
+        font-family: values.$fontTitle;
+        font-size: 18px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-
-        .user {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .img{
-              margin-bottom: 20px;
-              background-color: colors.$orange;
-              border-radius: 50%;
-              img{
-                width: 150px;
-                height: 150px;
-              }
-            }
-
-            label {
-              font-family: values.$fontTitle;
-              font-size: 18px;
-                display: flex;
-                flex-direction: column;
-                input{
-                  height: 40px;
-                  border-radius: 3px;
-                  padding-left:5px;
-                  margin-top: 10px;
-                }
-            }
+        
+        input {
+          height: 40px;
+          border-radius: 3px;
+          padding-left: 5px;
+          margin-top: 10px;
         }
-        .submitButton {
-            background-color: #4caf50;
-            height: 40px;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          
-            &:hover {
-              background-color: #45a049;
-            }
-          
-            &:active {
-              background-color: #3e8e41;
-            }
-          }
+      }
     }
+    
+    .submitButton {
+      background-color: #4caf50;
+      height: 40px;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: #45a049;
+      }
+      
+      &:active {
+        background-color: #3e8e41;
+      }
+    }
+  }
 }
 
-.containerMessage{
+.containerMessage {
   position: absolute;
   top: -60px;
   left: 50%;
@@ -85,11 +92,31 @@
   background-color: colors.$blue;
   border-radius: 10px;
   padding: 10px;
-
-  p{
+  box-shadow: 0 0 10px 0 rgba(240, 145, 20);
+  border: solid 1px colors.$orange;
+  
+  p {
     font-family: values.$fontTitle;
     font-size: 20px;
   }
 }
 
+}
+@media screen and (max-width: 700px) {
+  .containerForm {
+    max-width: 350px;
+    max-height: 450px;
+  }
 
+  .containerMessage {
+    top: 10%;
+    max-width: 330px;
+    height: 230px;
+    text-align: center;
+    
+    p {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+}
