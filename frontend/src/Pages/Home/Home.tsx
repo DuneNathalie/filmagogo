@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Genre from '../../Components/Home/Genre/Genre.tsx';
-import Menu from '../../Components/Menu/Menu.tsx';
+import NavBar from './../../Components/Header/NavBar/NavBar.tsx';
 
 import Styles from "./Home.module.scss";
 
@@ -46,8 +46,6 @@ const Home: React.FC = () => {
 
   return (
     <div className={Styles.container}>
-      <Menu img={User} title="Pour Toto" />
-      
       {/* Passer les films récupérés pour chaque genre */}
       <Genre data={popularFilms} theme="Populaire"/>
       <Genre data={mangaFilms} theme="Manga"/>
@@ -55,8 +53,6 @@ const Home: React.FC = () => {
       <Genre data={horrorFilms} theme="Horror"/>
       <Genre data={westernFilms} theme="Western"/>
       <Genre data={actionFilms} theme="Action"/>
-      
-      <Footer />
     </div>
   );
 };

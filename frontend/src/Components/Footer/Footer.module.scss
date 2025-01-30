@@ -1,18 +1,33 @@
 @use "../../styles/colors";
+@use "../../styles/values";
 
 .container {
     width: 100%;
     border-top: solid 1px colors.$orange;
+    height: 35px;
+    background-color: aqua;
     .social {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
+        gap:10px;
 
         a {
             margin: 5px;
             display: flex;
             align-items: center;
+            text-decoration: none;
+
+            p{
+                color: colors.$orangeLight;
+                text-decoration: none;
+                font-family: values.$fontTitle;
+                font-size: 22px;
+                font-weight: bold;
+                &:hover {
+                    color: colors.$orange;
+                }
+            }
 
             .icon {
                 width: 20px;
@@ -25,4 +40,14 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        margin-bottom: 0;
+        .social{
+            height: 35px;
+        }
+    }
+
 }

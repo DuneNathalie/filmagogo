@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import Menu from "../../Components/Menu/Menu.tsx";
 import Card from "../../Components/Description/Card/Card.tsx";
-import User from "../../assets/user.png";
 
 import Styles from "./Descriptif.module.scss";
-import Footer from '../../Components/Footer/Footer.tsx';
+
 import Genre from '../../Components/Home/Genre/Genre.tsx';
+
 
 const Descriptif: React.FC = () => {
   const [popularFilms, setPopularFilms] = useState([]);
@@ -38,10 +37,8 @@ const Descriptif: React.FC = () => {
 
   return (
     <div className={Styles.container}>
-      <Menu img={User} title='Description' />
       <Card idFilm={idFilm}/>
       <Genre data={popularFilms} theme="A voir aussi" />
-      <Footer />
     </div>
   );
 };

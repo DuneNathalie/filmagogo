@@ -1,12 +1,12 @@
-@use "../../Styles/colors";
-@use "../../Styles/values";
+@use "../../../Styles/colors";
+@use "../../../Styles/values";
 
 .container{
     display:flex;
     justify-content: space-between;
     padding: 10px 15px;
     max-height: 50px;
-    border-bottom: 1.5px solid colors.$orange;
+   // border-bottom: 1.5px solid colors.$orange;
 
     .user{
         display: flex;
@@ -26,6 +26,21 @@
             font-family: values.$fontTitle;
             font-weight: bold;
             font-size: 1.5rem;
+        }
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        
+        a{
+            text-decoration: none;
+            color: colors.$white;
+    
+            &:hover{
+                color: colors.$orange;
+            }
         }
     }
 
