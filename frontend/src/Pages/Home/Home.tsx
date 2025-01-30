@@ -5,7 +5,6 @@ import NavBar from './../../Components/Header/NavBar/NavBar.tsx';
 
 import Styles from "./Home.module.scss";
 
-import User from "../../assets/user.png";
 import Footer from '../../Components/Footer/Footer.tsx';
 
 const Home: React.FC = () => {
@@ -46,13 +45,14 @@ const Home: React.FC = () => {
 
   return (
     <div className={Styles.container}>
-      {/* Passer les films récupérés pour chaque genre */}
+      <NavBar/>
       <Genre data={popularFilms} theme="Populaire"/>
       <Genre data={mangaFilms} theme="Manga"/>
       <Genre data={comedyFilms} theme="Comedy"/>
       <Genre data={horrorFilms} theme="Horror"/>
       <Genre data={westernFilms} theme="Western"/>
       <Genre data={actionFilms} theme="Action"/>
+      <Footer/>
     </div>
   );
 };

@@ -7,9 +7,6 @@ import Login from './Pages/Login/Login.tsx';
 import Home from './Pages/Home/Home.tsx';
 import Descriptif from './Pages/Descriptif/Descriptif.tsx';
 import Favoris from './Pages/Favoris/Favoris.tsx';
-import NavBar from './Components/Header/NavBar/NavBar.tsx';
-
-import Logo from './Components/Header/logo/Logo.tsx';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -17,17 +14,12 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <ModalProvider>
-        {location.pathname !== '/' && <NavBar />} 
-        {location.pathname === '/' && <Logo />} 
-
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/home' element={<Home />} />
           <Route path='/descriptif' element={<Descriptif />} />
           <Route path='/favoris' element={<Favoris />} />
         </Routes>
-
-  
       </ModalProvider>
     </div>
   );

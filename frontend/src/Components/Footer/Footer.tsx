@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     <FaGithub className={Styles.icon} />
                 </a>
                 <a href="https://port-folio-red-phi.vercel.app" rel="noopener noreferrer" aria-label="Portfolio">
-                    <p>Portfolio</p>
+                    Portfolio
                 </a>
                 <a href="https://www.linkedin.com/in/nathalie-dune-1b4a09245" rel="noopener noreferrer" aria-label="Facebook">
                     <FaLinkedin className={Styles.icon} />

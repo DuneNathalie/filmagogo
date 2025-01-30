@@ -5,6 +5,8 @@ import Card from "../../Components/Description/Card/Card.tsx";
 import Styles from "./Descriptif.module.scss";
 
 import Genre from '../../Components/Home/Genre/Genre.tsx';
+import NavBar from '../../Components/Header/NavBar/NavBar.tsx';
+import Footer from '../../Components/Footer/Footer.tsx';
 
 
 const Descriptif: React.FC = () => {
@@ -37,8 +39,10 @@ const Descriptif: React.FC = () => {
 
   return (
     <div className={Styles.container}>
+      <NavBar />
       <Card idFilm={idFilm}/>
       <Genre data={popularFilms} theme="A voir aussi" />
+      <Footer />
     </div>
   );
 };
