@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Styles from "./User.module.scss";
 import { useModal } from '../../../context/modal.tsx';
-import ModalMessage from '../../Modal/ModalMessage.tsx';
+import ModalContent from '../../Modal/Modal.tsx';
 
 interface UserProps {
     user: string;
@@ -18,7 +18,7 @@ const User: React.FC<UserProps> = ({ user, name }) => {
     const navigate = useNavigate();
     const handleClick = () => {
         if (name === "Utilisateur") {
-            showModal(<ModalMessage text="Merci d'ajouter un utilisateur pour vous connecter"/>);
+            showModal(<ModalContent text="Merci d'ajouter un utilisateur pour vous connecter"type="infos"/>);
            // alert("Ajouter utilisateur");
         } else{
             navigate('/home');
