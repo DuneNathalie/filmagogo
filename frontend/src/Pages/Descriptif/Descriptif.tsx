@@ -8,14 +8,13 @@ import Genre from '../../Components/Home/Genre/Genre.tsx';
 import NavBar from '../../Components/Header/NavBar/NavBar.tsx';
 import Footer from '../../Components/Footer/Footer.tsx';
 
-
 const Descriptif: React.FC = () => {
   const [popularFilms, setPopularFilms] = useState([]);
   const [idFilm, setIdFilm] = useState<string | null>(localStorage.getItem('idFilm'));
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7"
+      `https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7`
     )
       .then((response) => response.json())
       .then((data) => {

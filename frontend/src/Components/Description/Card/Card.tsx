@@ -10,6 +10,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ idFilm }) => {
+
   const [film, setFilm] = useState<any>(null);
 
   const { showModal } = useModal();

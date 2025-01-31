@@ -34,7 +34,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7"
+      `https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7`
     )
       .then((response) => response.json())
       .then((data) => {
