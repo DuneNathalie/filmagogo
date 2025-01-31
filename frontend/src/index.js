@@ -6,6 +6,9 @@ import './Styles/_globales.scss'; // Importez vos styles globaux ici
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
