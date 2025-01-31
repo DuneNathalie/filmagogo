@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
     } else {
       console.log('Aucun ID de film trouvé');
     }
-  }, [idFilm]);
+  }, [idFilm]); 
 
   const handleClick = () => {
     if (film?.homepage) {
@@ -41,8 +41,7 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
     localStorage.setItem('favoris', JSON.stringify(newFilmsFavoris));
 
     console.log('Favoris:', localStorage.getItem('favoris'));
-    showModal(<ModalContent text='Ton film a bien été ajouté à tes favoris' type='infos'/>);
-   /// alert('Le film a été ajouté à vos favoris');
+    showModal(<ModalContent text='Ton film a bien été ajouté à tes favoris' type='infos' />);
   };
 
   if (!film) {
@@ -51,18 +50,20 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
 
   return (
     <div className={Styles.container}>
-      <div className={Styles.img}>
-        <img src={`https://image.tmdb.org/t/p/w500${film.backdrop_path}`} alt={film.title} />
-      </div>
-      <div className={Styles.descriptionFilm}>
-        <div>
-          <h1>{film.title}</h1>
-          <p>{film.overview}</p>
-          <p>Note {film.vote_average}</p>
+      <div className={Styles.containerDescription}>
+        <div className={Styles.img}>
+          <img src={`https://image.tmdb.org/t/p/w500${film.backdrop_path}`} alt={film.title} />
         </div>
-        <div className={Styles.button}>
-          <Button onClick={handleClick} text="Trouver le film sur..." type='site' />
-          <Button onClick={handleClickFavoris} text="Ajouter à mes favoris" type='favoris' />
+        <div className={Styles.descriptionFilm}>
+          <div className={Styles.text}>
+            <h2>{film.title}</h2>
+            <p>{film.overview}</p>
+            <p>Note {film.vote_average}</p>
+          </div>
+          <div className={Styles.button}>
+            <Button onClick={handleClick} text="Trouver le film sur..." type='site' />
+            <Button onClick={handleClickFavoris} text="Ajouter à mes favoris" type='favoris' />
+          </div>
         </div>
       </div>
     </div>

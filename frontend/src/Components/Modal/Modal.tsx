@@ -46,17 +46,16 @@ const ModalUser: React.FC<ModalUserProps> = ({ type,text }) => {
     hideModal();
   };
 
-  //////
+ 
   useEffect(() => {
     if (type === 'infos') {
      const timer = setTimeout(() => {
         hideModal();
         console.log("Fermeture automatique après 3 secondes.");
-      }, 3000);
+      }, 1500);
       return () => clearTimeout(timer);
     }
   }, [type, hideModal]);
-  //////
 
   return (
     <div className={Styles.container}>

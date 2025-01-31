@@ -1,9 +1,10 @@
 @use "../../Styles/colors";
+@use "../../Styles/values";
 
 .container {
     text-align: center;
-
     button {
+        font-size: values.$font_size_button;
         height: 40px;
         border: none;
         cursor: pointer;

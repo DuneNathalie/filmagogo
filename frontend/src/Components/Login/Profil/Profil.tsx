@@ -11,9 +11,11 @@ const Profil: React.FC = () => {
     console.log("verifie si j'ai bien les deux", name);
     return (
         <div className={Styles.container}>
-            <h1>Qui est-ce?</h1>
+            <div className={Styles.profil}>
+            <h2>Qui est-ce?</h2>
             <div className={Styles.user}>
                 <User user={UserOne} name={name} />
+            </div>
             </div>
         </div>
     );

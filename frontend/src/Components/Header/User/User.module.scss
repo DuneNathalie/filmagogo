@@ -20,12 +20,12 @@
             width: 30px;
             height: 30px;
         }
-
+        
         p{
             color:colors.$white;
             font-family: values.$fontTitle;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: values.$font_size_2;
         }
     }
 
