@@ -5,7 +5,7 @@
 
   .containerForm {
     position: absolute;
-    top: 30%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -42,7 +42,7 @@
       
       label {
         font-family: values.$fontTitle;
-        font-size: 18px;
+        font-size: values.$font_size_p;
         display: flex;
         flex-direction: column;
         
@@ -62,7 +62,7 @@
       padding: 10px 20px;
       border: none;
       border-radius: 3px;
-      font-size: 16px;
+      font-size: values.$font_size_pp;
       cursor: pointer;
       transition: background-color 0.3s ease;
       
@@ -97,7 +97,7 @@
   
   p {
     font-family: values.$fontTitle;
-    font-size: 20px;
+    font-size: values.$font_size_2p;
   }
 }
 
@@ -115,7 +115,7 @@
     text-align: center;
     
     p {
-      font-size: 16px;
+      font-size: values.$font_size_pp;
       padding: 10px;
     }
   }

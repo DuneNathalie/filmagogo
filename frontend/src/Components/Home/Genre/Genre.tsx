@@ -25,13 +25,29 @@ interface GenreProps {
 
 const Genre: React.FC<GenreProps> = ({ theme, data }) => {
     const navigate = useNavigate();
-
+    console.log("Genre props", { data, theme }); 
     const [slidesPerView, setSlidesPerView] = useState(window.innerWidth <= 700 ? 1 : 8);
 
     useEffect(() => {
         const handleResize = () => {
-            setSlidesPerView(window.innerWidth <= 700 ? 1 : 8);
+            if (window.innerWidth <= 700) {
+                setSlidesPerView(1);
+            } else if (window.innerWidth <= 750) {
+                setSlidesPerView(2);
+            } else if (window.innerWidth <= 950) {
+                setSlidesPerView(3);
+            } else if (window.innerWidth <=1400) {
+                setSlidesPerView(4);
+            } else if (window.innerWidth <= 1700) {
+                setSlidesPerView(6);
+            } else if (window.innerWidth <= 1900) {
+                setSlidesPerView(7);
+            } else {
+                setSlidesPerView(8);
+            }
         };
+    
+        handleResize();
     
         window.addEventListener('resize', handleResize);
         
@@ -39,9 +55,7 @@ const Genre: React.FC<GenreProps> = ({ theme, data }) => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
-
-
+    
     const handleClickedFilm = (event: React.MouseEvent<HTMLImageElement>) => {
         const id = Number(event.currentTarget.getAttribute('data-id'));
         localStorage.setItem('idFilm', id.toString());

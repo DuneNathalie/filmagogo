@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
-import {useTypewriter} from 'react-simple-typewriter';
+import { useTypewriter } from 'react-simple-typewriter';
 
 import Styles from './List.module.scss';
 
 import { MdDeleteForever } from "react-icons/md";
 
-import  vide  from "../../../src/assets/vide.png";
+import vide from "../../../src/assets/vide.png";
 
 const List: React.FC = () => {
-    const [typeEffect]=useTypewriter({
-        words:["Tu n'as encore rien ajouté à tes favoris!"],
-        loop:1,
+    const [typeEffect] = useTypewriter({
+        words: ["Tu n'as encore rien ajouté à tes favoris!"],
+        loop: 1,
         typeSpeed: 40,
     });
 
@@ -45,24 +45,24 @@ const List: React.FC = () => {
 
     return (
         <div className={Styles.container}>
-            <h2>Liste de mes favoris</h2>
-            <div className={Styles.itemFavoris}>
-                <div className={Styles.favoris}>
-                    {favoris.length > 0 ? (
-                        favoris.map((film) => (
-                            <div key={film.id} className={Styles.imgfilm}>
-                                <img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} />
-                                <button onClick={() => removeFromFavorites(film.id)}>Supprimer<MdDeleteForever className={Styles.icon} /></button>
+                <h2>Liste de mes favoris</h2>
+                <div className={Styles.itemFavoris}>
+                    <div className={Styles.favoris}>
+                        {favoris.length > 0 ? (
+                            favoris.map((film) => (
+                                <div key={film.id} className={Styles.imgfilm}>
+                                    <img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} alt={film.title} />
+                                    <button onClick={() => removeFromFavorites(film.id)}>Supprimer<MdDeleteForever className={Styles.icon} /></button>
+                                </div>
+                            ))
+                        ) : (
+                            <div className={Styles.oups}>
+                                <img src={vide} alt="vide" />
+                                <p>{typeEffect}</p>
                             </div>
-                        ))
-                    ) : (
-                        <div className={Styles.oups}>
-                            <img src={vide} alt="vide" />
-                            <p>{typeEffect}</p>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
-            </div>
         </div>
     );
 };

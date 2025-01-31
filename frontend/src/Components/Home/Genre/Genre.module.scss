@@ -7,7 +7,7 @@
 
     h2 {
         font-family: values.$fontTitle;
-        font-size: 24px;
+        font-size: values.$font_size_2;
     }
 
     .swiper {
@@ -35,6 +35,8 @@
 
         h2{
             margin: 10px;
+            text-align: center;
+            font-size: values.$font_size_1;
         }
 
         .swiper {
