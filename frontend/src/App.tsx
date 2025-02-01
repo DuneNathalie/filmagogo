@@ -16,9 +16,10 @@ const App: React.FC = () => {
       <ModalProvider>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/home' element={<Home />} />
+          {/** <Route path='/home' element={<Home />} />
           <Route path='/descriptif' element={<Descriptif />} />
           <Route path='/favoris' element={<Favoris />} />
+        */}
         </Routes>
       </ModalProvider>
     </div>
