@@ -69,8 +69,8 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
             <p>Note {film.vote_average}</p>
           </div>
           <div className={Styles.button}>
-            <Button onClick={handleClick} text="Trouver le ici!" type='site' />
-            <Button onClick={handleClickFavoris} text="Ajouter à mes favoris" type='favoris' />
+            <Button onClick={handleClick} text="Trouver le ici" type='site' />
+            <Button onClick={handleClickFavoris} text="favoris +" type='favoris' />
           </div>
         </div>
       </div>
