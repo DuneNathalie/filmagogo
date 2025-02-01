@@ -12,9 +12,16 @@ const Descriptif: React.FC = () => {
   const [popularFilms, setPopularFilms] = useState([]);
   const [idFilm, setIdFilm] = useState<string | null>(localStorage.getItem('idFilm'));
 
+  const apiKey = process.env.REACT_APP_API_KEY_TMDB;
+  if (!apiKey) {
+    console.error("Clé API non définie dans les variables d'environnement !");
+  } else {
+    console.log("Clé API chargée :", apiKey);
+  }
+
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
     )
       .then((response) => response.json())
       .then((data) => {

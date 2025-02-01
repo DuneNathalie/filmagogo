@@ -1,3 +1,5 @@
+/// <reference types="node" />
+
 import React, { useEffect, useState } from 'react';
 
 import Genre from '../../Components/Home/Genre/Genre.tsx';
@@ -8,16 +10,22 @@ import Styles from "./Home.module.scss";
 import Footer from '../../Components/Footer/Footer.tsx';
 
 const Home: React.FC = () => {
-  const [popularFilms, setPopularFilms] = useState([]);
-  const [actionFilms, setActionFilms] = useState([]);
-  const [comedyFilms, setComedyFilms] = useState([]);
-  const [mangaFilms, setMangaFilms] = useState([]);
-  const [westernFilms, setWesternFilms] = useState([]);
-  const [horrorFilms, setHorrorFilms] = useState([]);
+  const [popularFilms, setPopularFilms] = useState<any[]>([]);
+  const [actionFilms, setActionFilms] = useState<any[]>([]);
+  const [comedyFilms, setComedyFilms] = useState<any[]>([]);
+  const [mangaFilms, setMangaFilms] = useState<any[]>([]);
+  const [westernFilms, setWesternFilms] = useState<any[]>([]);
+  const [horrorFilms, setHorrorFilms] = useState<any[]>([]);
 
+  const apiKey = process.env.REACT_APP_API_KEY_TMDB;
+  if (!apiKey) {
+    console.error("Clé API non définie dans les variables d'environnement !");
+  } else {
+    console.log("Clé API chargée :", apiKey);
+  }
 
   const fetchFilmsByGenre = (genreId: number, setFilms: React.Dispatch<React.SetStateAction<any[]>>) => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a4a7fa2a24f06525feb656146f5305a7&with_genres=${genreId}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genreId}`)
       .then(response => response.json())
       .then(data => setFilms(data.results))
       .catch(error => console.error('Erreur:', error));
@@ -34,7 +42,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=a4a7fa2a24f06525feb656146f5305a7`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
     )
       .then((response) => response.json())
       .then((data) => {
