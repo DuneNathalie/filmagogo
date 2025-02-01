@@ -1,0 +1,32 @@
+@use "../../Styles/colors";
+@use "../../Styles/values";
+
+.container {
+    text-align: center;
+    button {
+        font-size: values.$font_size_button;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        color: colors.$white;
+        border-radius: 5px;
+    }
+
+    .favoris {
+        background-color: colors.$red;
+        width: 150px;
+
+        &:hover {
+            box-shadow: 0 0 5px colors.$red;
+        }
+    }
+
+    .site {
+        background-color: colors.$green;
+        width: 150px;
+
+        &:hover {
+            box-shadow: 0 0 5px colors.$green;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "../../../Styles/values";
+@use "../../../Styles/colors";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+
+    .profil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        flex:0.5;
+
+        h2 {
+            font-family: values.$fontTitle;
+            font-size: values.$font_title;
+            margin-bottom: 15vh;
+        }
+        .user {
+            font-family: values.$fontTitle;
+            display: flex;
+            gap: 2.5vw;
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        justify-content: start;
+        .profil {
+            h2{
+                font-size: values.$font_size_1;
+                margin: 5vh 0 8vh 0;
+            }
+        }
+    }
+    
+}

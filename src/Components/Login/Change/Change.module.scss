@@ -1,0 +1,17 @@
+@use"../../../Styles/colors";
+@use"../../../Styles/values";
+
+.container{
+    display:flex;
+    align-items: center;
+    margin-left: 10px;
+
+    button{
+        background-color: colors.$blue;
+        border: none;
+        color:colors.$white;
+        cursor: pointer;
+        text-align: center;
+        font-size: values.$font_title_p;
+    }
+}
