@@ -70,7 +70,7 @@ const Card: React.FC<CardProps> = ({ idFilm }) => {
           </div>
           <div className={Styles.button}>
             <Button onClick={handleClick} text="Trouver le ici" type='site' />
-            <Button onClick={handleClickFavoris} text="favoris +" type='favoris' />
+            <Button onClick={handleClickFavoris} text="Favoris +" type='favoris' />
           </div>
         </div>
       </div>

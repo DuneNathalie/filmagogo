@@ -8,10 +8,10 @@ import Styles from "./Home.module.scss";
 import Footer from '../../Components/Footer/Footer';
 
 const Home: React.FC = () => {
-  const [popularFilms, setPopularFilms] = useState<any[]>([]);
-  const [actionFilms, setActionFilms] = useState<any[]>([]);
+  const [animationFilms, setAnimationFilms] = useState<any[]>([]);
+  const [romanceFilms, setRomanceFilms] = useState<any[]>([]);
   const [comedyFilms, setComedyFilms] = useState<any[]>([]);
-  const [mangaFilms, setMangaFilms] = useState<any[]>([]);
+  const [histoireFilms, setHistoireFilms] = useState<any[]>([]);
   const [westernFilms, setWesternFilms] = useState<any[]>([]);
   const [horrorFilms, setHorrorFilms] = useState<any[]>([]);
 
@@ -31,14 +31,15 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // Appeler la fonction pour chaque genre
-    fetchFilmsByGenre(28, setActionFilms);
+    fetchFilmsByGenre(16, setAnimationFilms);
+    fetchFilmsByGenre(10749, setRomanceFilms);
     fetchFilmsByGenre(35, setComedyFilms);
-    fetchFilmsByGenre(16, setMangaFilms);
+    fetchFilmsByGenre(36, setHistoireFilms);
     fetchFilmsByGenre(80, setWesternFilms);
     fetchFilmsByGenre(27, setHorrorFilms);
   }, []);
 
-  useEffect(() => {
+ {/**  useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
     )
@@ -47,17 +48,17 @@ const Home: React.FC = () => {
         setPopularFilms(data.results);
       })
       .catch((error) => console.error("Erreur:", error));
-  }, []);
+  }, []); */}
 
   return (
     <div className={Styles.container}>
       <NavBar/>
-      <Genre data={popularFilms} theme="Populaire"/>
       <Genre data={comedyFilms} theme="Comedy"/>
+      <Genre data={animationFilms} theme="Animation"/>
       <Genre data={horrorFilms} theme="Horror"/>
       <Genre data={westernFilms} theme="Western"/>
-      <Genre data={actionFilms} theme="Action"/>
-      <Genre data={mangaFilms} theme="Manga"/>
+      <Genre data={romanceFilms} theme="Romance"/>
+      <Genre data={histoireFilms} theme="Histoire"/>
       <Footer/>
     </div>
   );
