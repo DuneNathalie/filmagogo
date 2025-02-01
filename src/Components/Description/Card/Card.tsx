@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './Card.module.scss';
-import Button from '../../Button/Button.tsx';
-import ModalContent from '../../Modal/Modal.tsx';
+import Button from '../../Button/Button';
+import ModalContent from '../../Modal/Modal';
 
-import { useModal } from '../../../context/modal.tsx';
+import { useModal } from '../../../context/modal';
 
 interface CardProps {
   idFilm: string | null;

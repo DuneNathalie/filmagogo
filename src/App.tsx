@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import { ModalProvider } from '../src/context/modal.tsx';
+import { ModalProvider } from '../src/context/modal';
 
-import Login from './Pages/Login/Login.tsx';
-import Home from './Pages/Home/Home.tsx';
-import Descriptif from './Pages/Descriptif/Descriptif.tsx';
-import Favoris from './Pages/Favoris/Favoris.tsx';
+import Login from './Pages/Login/Login';
+import Home from './Pages/Home/Home';
+import Descriptif from './Pages/Descriptif/Descriptif';
+import Favoris from './Pages/Favoris/Favoris';
 
 const App: React.FC = () => {
   const location = useLocation();

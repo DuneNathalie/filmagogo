@@ -3,8 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Styles from "./User.module.scss";
-import { useModal } from '../../../context/modal.tsx';
-import ModalContent from '../../Modal/Modal.tsx';
+import { useModal } from '../../../context/modal';
+import ModalContent from '../../Modal/Modal';
 
 interface UserProps {
     user: string;

@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 
-import Genre from '../../Components/Home/Genre/Genre.tsx';
-import NavBar from './../../Components/Header/NavBar/NavBar.tsx';
+import Genre from '../../Components/Home/Genre/Genre';
+import NavBar from './../../Components/Header/NavBar/NavBar';
 
 import Styles from "./Home.module.scss";
 
-import Footer from '../../Components/Footer/Footer.tsx';
+import Footer from '../../Components/Footer/Footer';
 
 const Home: React.FC = () => {
   const [popularFilms, setPopularFilms] = useState<any[]>([]);

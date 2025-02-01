@@ -1,31 +1,29 @@
 {
-    "compilerOptions": {
-      "target": "es6",
-      "lib": ["es6", "dom"],
-      "types": ["node"],
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "module": "commonjs",
-      "rootDir": "./",
-      "typeRoots": ["node_modules/@types"],
-      "allowImportingTsExtensions": true,
-      "allowSyntheticDefaultImports": true,
-      "outDir": "./dist",
-      "strict": false,
-      "skipLibCheck": true,
-      "allowJs": true,
-      "forceConsistentCasingInFileNames": true,
-      "noFallthroughCasesInSwitch": true,
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "jsx": "react-jsx"
-    },
-    "include": [
-      "src/**/*"
-    ],
-    "exclude": [
-      "dist"
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "rootDir": "./",
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "strict": false,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "declaration": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}

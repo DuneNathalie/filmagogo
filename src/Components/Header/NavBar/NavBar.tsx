@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import Styles from "./NavBar.module.scss";
 
-import User from '../../Header/User/User.tsx';
+import User from '../../Header/User/User';
 
 import User1 from '../../../assets/user.png';
 

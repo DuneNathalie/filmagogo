@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useModal } from '../../context/modal.tsx';
+import { useModal } from '../../context/modal';
 
 import { useNavigate } from 'react-router-dom';
 import User from "../../assets/user.png";

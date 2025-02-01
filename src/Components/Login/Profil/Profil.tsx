@@ -2,7 +2,7 @@ import React from 'react';
 
 import Styles from './Profil.module.scss';
 
-import User from './../User/User.tsx';
+import User from './../User/User';
 import UserOne from "./../../../assets/user.png";
 
 const Profil: React.FC = () => {

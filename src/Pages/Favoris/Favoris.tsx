@@ -2,9 +2,9 @@ import React from 'react';
 
 import Styles from "./Favoris.module.scss";
 
-import List from '../../Components/Favoris/List.tsx';
-import NavBar from '../../Components/Header/NavBar/NavBar.tsx';
-import Footer from '../../Components/Footer/Footer.tsx';
+import List from '../../Components/Favoris/List';
+import NavBar from '../../Components/Header/NavBar/NavBar';
+import Footer from '../../Components/Footer/Footer';
 
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Profil from "../../Components/Login/Profil/Profil.tsx";
+import Profil from "../../Components/Login/Profil/Profil";
 
 import Styles from "./Login.module.scss";
-import Change from '../../Components/Login/Change/Change.tsx';
-import Footer from '../../Components/Footer/Footer.tsx';
-import Logo from '../../Components/Header/logo/Logo.tsx';
+import Change from '../../Components/Login/Change/Change';
+import Footer from '../../Components/Footer/Footer';
+import Logo from '../../Components/Header/logo/Logo';
 
 
 const Login: React.FC = () => {

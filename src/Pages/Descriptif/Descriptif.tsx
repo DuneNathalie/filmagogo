@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import Card from "../../Components/Description/Card/Card.tsx";
+import Card from "../../Components/Description/Card/Card";
 
 import Styles from "./Descriptif.module.scss";
 
-import Genre from '../../Components/Home/Genre/Genre.tsx';
-import NavBar from '../../Components/Header/NavBar/NavBar.tsx';
-import Footer from '../../Components/Footer/Footer.tsx';
+import Genre from '../../Components/Home/Genre/Genre';
+import NavBar from '../../Components/Header/NavBar/NavBar';
+import Footer from '../../Components/Footer/Footer';
 
 const Descriptif: React.FC = () => {
   const [popularFilms, setPopularFilms] = useState([]);
