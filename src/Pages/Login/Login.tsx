@@ -10,6 +10,12 @@ import Logo from '../../Components/Header/logo/Logo';
 
 const Login: React.FC = () => {
 
+  if (localStorage.getItem('User') === null) {
+    localStorage.setItem('User', 'Utilisateur');
+}
+
+console.log(localStorage.getItem('User'));
+
   return (
       <div className={Styles.container}>
         <Logo />

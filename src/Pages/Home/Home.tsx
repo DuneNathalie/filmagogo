@@ -1,5 +1,3 @@
-/// <reference types="node" />
-
 import React, { useEffect, useState } from 'react';
 
 import Genre from '../../Components/Home/Genre/Genre';
