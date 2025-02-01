@@ -70,7 +70,7 @@ const ModalUser: React.FC<ModalUserProps> = ({ type,text }) => {
               Nom d'utilisateur:
               <input
                 type="text"
-                value={name}
+               // value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </label>

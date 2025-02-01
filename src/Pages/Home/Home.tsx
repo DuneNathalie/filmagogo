@@ -53,11 +53,11 @@ const Home: React.FC = () => {
     <div className={Styles.container}>
       <NavBar/>
       <Genre data={popularFilms} theme="Populaire"/>
-      <Genre data={mangaFilms} theme="Manga"/>
       <Genre data={comedyFilms} theme="Comedy"/>
       <Genre data={horrorFilms} theme="Horror"/>
       <Genre data={westernFilms} theme="Western"/>
       <Genre data={actionFilms} theme="Action"/>
+      <Genre data={mangaFilms} theme="Manga"/>
       <Footer/>
     </div>
   );

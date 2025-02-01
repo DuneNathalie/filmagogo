@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     return (
         <div className={Styles.container}>
             <div className={Styles.social}>
-                <p>V1.0.0</p>
+                <p>V1.0.1</p>
                 <a href="https://github.com/DuneNathalie" rel="noopener noreferrer" aria-label="github">
                     <FaGithub className={Styles.icon} />
                 </a>
