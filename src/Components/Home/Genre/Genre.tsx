@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Styles from "./Genre.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation, A11y } from 'swiper/modules';
-
-import { useNavigate } from 'react-router-dom';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

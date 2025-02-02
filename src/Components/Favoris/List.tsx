@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { MdDeleteForever } from "react-icons/md";
 
 import { useTypewriter } from 'react-simple-typewriter';
-
 import Styles from './List.module.scss';
-
-import { MdDeleteForever } from "react-icons/md";
 
 import vide from "../../../src/assets/vide.png";
 

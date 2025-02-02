@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
     return (
         <div className={Styles.container}>
             <div className={Styles.social}>
-                <p>V1.0.1</p>
+                <p>V1.0.2</p>
                 <a href="https://github.com/DuneNathalie" rel="noopener noreferrer" aria-label="github">
                     <FaGithub className={Styles.icon} />
                 </a>

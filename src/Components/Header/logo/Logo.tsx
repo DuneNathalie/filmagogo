@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Styles from './Logo.module.scss';
-import logo from '../../../assets/logo.png';
 
+import logo from '../../../assets/logo.png';
 
 const Logo: React.FC = () => {
 

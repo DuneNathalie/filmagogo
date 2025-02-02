@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { useModal } from '../../context/modal';
 
-import { useNavigate } from 'react-router-dom';
+import Styles from './Modal.module.scss';
+
 import User from "../../assets/user.png";
 
-import Styles from './Modal.module.scss';
 
 interface ModalUserProps {
   type: 'infos' | 'update';

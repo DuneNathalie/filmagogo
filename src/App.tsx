@@ -3,10 +3,10 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 import { ModalProvider } from '../src/context/modal';
 
-import Login from './Pages/Login/Login';
-import Home from './Pages/Home/Home';
-import Descriptif from './Pages/Descriptif/Descriptif';
-import Favoris from './Pages/Favoris/Favoris';
+import Login from './Pages/Login';
+import Home from './Pages/Home';
+import Descriptif from './Pages/Descriptif';
+import Favoris from './Pages/Favoris';
 
 const App: React.FC = () => {
   const location = useLocation();
