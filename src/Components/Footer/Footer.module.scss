@@ -3,22 +3,18 @@
 
 .container {
     width: 100%;
+    height: 50px;
     border-top: solid 1px colors.$orange;
     font-family: values.$fontTitle;
     color: colors.$orange;
-    font-size: values.$font_size_2p;
-    margin-top: 20px;
 
     .social {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap:10px;
+        gap:15px;
 
         a {
-            margin: 5px;
-            display: flex;
-            align-items: center;
             text-decoration: none;
             font-size: values.$font_size_2p;
             font-family: values.$fontTitle;
