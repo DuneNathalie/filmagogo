@@ -40,7 +40,8 @@ const Description: React.FC<DescriptionProps> = ({ idFilm }) => {
     if (film?.homepage) {
       window.location.href = film.homepage;
     } else {
-      alert("pas de lien pour ce film");
+      showModal(<ModalContent text="Désolé, il n'y a pas de lien pour ce film" type='infos' />);
+      //alert("pas de lien pour ce film");
     }
   };
 
